@@ -1,0 +1,6 @@
+{
+		"name": "launchd-checkin",
+		"version": "0.0.1",
+		"author": "Holger Pirk <holger@airbug.de>",
+		"main": "./build/Release/checkin.node"
+}
