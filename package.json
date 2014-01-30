@@ -1,6 +1,6 @@
 {
 		"name": "node-launchd",
-		"version": "0.0.2",
+		"version": "0.0.3",
 		"author": "Holger Pirk <holger@airbug.de>",
 		"main": "./build/Release/checkin.node",
 		"repository": "git://github.com/little-big-h/node-launchd"

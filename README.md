@@ -15,7 +15,7 @@ Suppose, you created an app using express in directory
 
 and you want your app to use port 8080.
 
-First, create a launchd configuration file in
+First, create a launchd configuration file (e.g., yourapp.plist) in
 
 	~/Library/LaunchAgents
 
@@ -26,7 +26,7 @@ First, create a launchd configuration file in
     <plist version="1.0">
     <dict>
     	<key>Label</key>
-    	<string>de.airbug.node</string>
+    	<string>org.something.yourapp</string>
     	<key>EnvironmentVariables</key>
     		<dict>
     			<key>NODE_PATH</key>
@@ -57,4 +57,8 @@ First, create a launchd configuration file in
 change the app.js file in you project directory to start the http server using a launchd file handle like this
 
     http.createServer(app).listen({fd:require('node-launchd').getSocketFileDescriptorForName('HTTPSocket')});
+
+Finally, you can load the launchd configuration file like this
+
+    launchctl load -w ~/Library/LaunchAgents/yourapp.plist
 
