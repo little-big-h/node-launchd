@@ -7,7 +7,7 @@ Usage
 ----
 Suppose, you created an app using express in directory
 
-    /Users/you/yourapp
+    /Users/you/Projects/yourapp
 
 , and your node installation lives in
 
