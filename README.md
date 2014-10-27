@@ -42,6 +42,8 @@ Fill it with content such as this
     	<dict>
     		<key>HTTPSocket</key>
     		<dict>
+    			<key>SockFamily</key>
+    			<string>IPv4v6</string>
     			<key>SockServiceName</key>
     			<integer>8080</integer>
     		</dict>
@@ -50,6 +52,8 @@ Fill it with content such as this
     	<string>/Users/you/Projects/yourapp</string>
     </dict>
     </plist>
+
+If using OS X 10.9 or earlier, change `SockFamily` to `IPv4` (or `IPv6`) instead of `IPv4v6`.
 
 Change the app.js file in your project directory to start the http server using a launchd file handle like this
 
