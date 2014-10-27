@@ -47,8 +47,6 @@ First, create a launchd configuration file (e.g., yourapp.plist) in
     			<integer>8080</integer>
     			<key>SockType</key>
     			<string>stream</string>
-    			<key>SockPassive</key>
-    			<string>false</string>
     		</dict>
     	</dict>
     </dict>
