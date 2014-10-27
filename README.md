@@ -45,8 +45,6 @@ First, create a launchd configuration file (e.g., yourapp.plist) in
     			<string>IPv4</string>
     			<key>SockServiceName</key>
     			<integer>8080</integer>
-    			<key>SockType</key>
-    			<string>stream</string>
     		</dict>
     	</dict>
     </dict>
