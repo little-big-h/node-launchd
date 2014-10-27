@@ -1,15 +1,16 @@
 node-launchd
 ============
 
-A Node.js Addon to get sockets from launchd upon (port-activated) launching on osx
+A Node.js add-on to get sockets from launchd upon (port-activated) launching on OS X.
 
 Usage
-----
-Suppose, you created an app using express in directory
+-----
+
+Suppose, you created an app using Express in the directory
 
     /Users/you/Projects/yourapp
 
-, and your node installation lives in
+and your node installation is installed in the prefix
 
     /usr/local
 
@@ -17,9 +18,9 @@ and you want your app to use port 8080.
 
 First, create a launchd configuration file (e.g., com.example.yourapp.plist) in
 
-	~/Library/LaunchAgents
+    ~/Library/LaunchAgents
 
-, fill it with content such as this
+Fill it with content such as this
 
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -50,7 +51,7 @@ First, create a launchd configuration file (e.g., com.example.yourapp.plist) in
     </dict>
     </plist>
 
-change the app.js file in you project directory to start the http server using a launchd file handle like this
+Change the app.js file in your project directory to start the http server using a launchd file handle like this
 
     http.createServer(app).listen({fd:require('node-launchd').getSocketFileDescriptorForName('HTTPSocket')});
 
