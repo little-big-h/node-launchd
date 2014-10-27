@@ -27,11 +27,6 @@ First, create a launchd configuration file (e.g., yourapp.plist) in
     <dict>
     	<key>Label</key>
     	<string>org.something.yourapp</string>
-    	<key>EnvironmentVariables</key>
-    		<dict>
-    			<key>NODE_PATH</key>
-    			<string>/Users/you/Applications/Node.app/Contents/lib/node_modules</string>
-    		</dict>
     	<key>ProgramArguments</key>
     	<array>
     		<string>/Users/you/Applications/Node.app/Contents/bin/node</string>
