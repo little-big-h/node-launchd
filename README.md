@@ -25,6 +25,11 @@ First, create a launchd configuration file (e.g., com.example.yourapp.plist) in
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
     <plist version="1.0">
     <dict>
+    	<key>EnvironmentVariables</key>
+    	<dict>
+    		<key>NODE_ENV</key>
+    		<string>production</string>
+    	</dict>
     	<key>Label</key>
     	<string>com.example.yourapp</string>
     	<key>ProgramArguments</key>
