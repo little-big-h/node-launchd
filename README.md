@@ -11,7 +11,7 @@ Suppose, you created an app using express in directory
 
 , and your node installation lives in
 
-    /Users/you/Applications/Node.app/Contents
+    /usr/local
 
 and you want your app to use port 8080.
 
@@ -34,7 +34,7 @@ First, create a launchd configuration file (e.g., com.example.yourapp.plist) in
     	<string>com.example.yourapp</string>
     	<key>ProgramArguments</key>
     	<array>
-    		<string>/Users/you/Applications/Node.app/Contents/bin/node</string>
+    		<string>/usr/local/bin/node</string>
     		<string>app.js</string>
     	</array>
     	<key>Sockets</key>
