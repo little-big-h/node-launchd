@@ -35,7 +35,7 @@ First, create a launchd configuration file (e.g., com.example.yourapp.plist) in
     	<key>ProgramArguments</key>
     	<array>
     		<string>/Users/you/Applications/Node.app/Contents/bin/node</string>
-    		<string>/Users/you/Projects/yourapp/app.js</string>
+    		<string>app.js</string>
     	</array>
     	<key>Sockets</key>
     	<dict>
@@ -45,6 +45,8 @@ First, create a launchd configuration file (e.g., com.example.yourapp.plist) in
     			<integer>8080</integer>
     		</dict>
     	</dict>
+    	<key>WorkingDirectory</key>
+    	<string>/Users/you/Projects/yourapp</string>
     </dict>
     </plist>
 
