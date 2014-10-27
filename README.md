@@ -41,8 +41,6 @@ First, create a launchd configuration file (e.g., yourapp.plist) in
     	<dict>
     		<key>HTTPSocket</key>
     		<dict>
-    			<key>SockFamily</key>
-    			<string>IPv4</string>
     			<key>SockServiceName</key>
     			<integer>8080</integer>
     		</dict>
