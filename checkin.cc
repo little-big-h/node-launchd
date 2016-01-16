@@ -1,3 +1,5 @@
+/* -*- c-file-style: "k&r"; c-basic-offset: 2; indent-tabs-mode: nil -*- */
+
 #include <node.h>
 #include <v8.h>
 #include <launch.h>
@@ -5,7 +7,6 @@
 #include <sys/event.h>
 #include <fstream>
 
-//using namespace v8;
 using v8::Exception;
 using v8::FunctionCallbackInfo;
 using v8::Isolate;
@@ -18,9 +19,9 @@ using v8::Value;
 void Method(const FunctionCallbackInfo<Value>& args) {
   Isolate* isolate = args.GetIsolate();
 
-	if (args.Length() != 1) {
+  if (args.Length() != 1) {
     isolate->ThrowException(Exception::TypeError(
-                                String::NewFromUtf8(isolate, "Wrong number of arguments")));
+                              String::NewFromUtf8(isolate, "Wrong number of arguments")));
     return;
 	}
 
@@ -58,11 +59,13 @@ void Method(const FunctionCallbackInfo<Value>& args) {
     }
 		break;
 	}
+
 	default: {
     isolate->ThrowException(Exception::Error(String::NewFromUtf8(isolate, "Unknown Error")));
 		break;
 	}
 	}
+
 	free(handleName);
 }
 
